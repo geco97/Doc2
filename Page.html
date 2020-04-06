@@ -55,7 +55,7 @@ page {
 }
 page[size="A4"] {  
   width: 21cm;
-  height: 36cm; 
+  height: 50cm; 
 }
 page[size="A4"][layout="portrait"] {
   width: 29.7cm;
@@ -146,7 +146,7 @@ margin-top: 4px;
 margin-bottom: 4px;}
 .bobo{
 	display: grid;
-	grid-template-rows: 9cm auto 2cm 1cm;
+	grid-template-rows: 6cm auto 2cm 1cm;
 	height: 100%;	
 }
 .header,.body,.footer{
@@ -221,13 +221,21 @@ textarea {
 th, td {
   
   text-align: left;
+  width: 100px;
 }
 
 table tbody td{
   border:1px solid #000;
+
 }
-
-
+.withoutBorder
+{
+  border:0px solid #000;
+}
+.tdwithSameSize
+{
+  width: 20%;
+}
 </style>
 </head>
 <body>
@@ -235,7 +243,8 @@ table tbody td{
 <div class="divse">
 <div class="bobo">
 
-<div class="header"><div class="row text-right " >
+<div class="header">
+  <div class="row text-right " >
   <img src="./img/Annotation 2020-04-02 093246.png" alt="">
   
   </div>
@@ -244,10 +253,16 @@ table tbody td{
     <div class="col-xl-6 col-lg-6 col-md-6 col-6">
       
         <h4  class=" text-left ">HYRESAVTAL</h4>
-        <div class="hyers"><small><label>avatallnummer</label></small>
+        <div class="hyers">
+          <table>
        <tr>
-         <td> <input type="text" id="avtalnummer" placeholder="123" /></td>
+         <td>
+          <small><label>avatallnummer</label></small> 
+          <input type="text" id="avtalnummer" placeholder="123" />
+        </td>
+        <td class="withoutBorder"></td>
        </tr>
+      </table>
       </div>
       </div>
   </div>
@@ -266,7 +281,7 @@ table tbody td{
     </thead>
 
      <tbody>
-        <tabel>
+        <table>
           <tr>
             <td>
               <small><label >Ongqw</label></small>
@@ -289,7 +304,8 @@ table tbody td{
           </tr>
         
          <tr>
-          <td> <table>
+          <td> 
+            <table>
             <tr>
               <td colspan="2">
                 <small><label >Ong2</label></small>
@@ -303,7 +319,8 @@ table tbody td{
             </table>
           </td>
         
-         <td> <table>
+         <td>
+            <table>
            <tr>
             <td  colspan="2">
             <small><label >Ongcc</label></small>
@@ -334,93 +351,273 @@ table tbody td{
           <input type="text" />
           </td>
          </tr>
-
-         <tabel>
+        </tbody>
+</table>
+         <table>
            <thead>
              <th>Hyresföremål</th>
            </thead>
            <tr>
-             <td >
+             <td style="width:70%">
              <small><label>Typ</label></small> 
-            </td>
-            </tr>
-            <tr>
-              <td>
-              <input type="text" style="height: 80px"/>
+            
+              
+              <input type="text" style="height: 80px;width: 100%;"/>
             </td>
 
+
+            <td style="width:25%">
+              <small><label>Typ</label></small> 
+               <input type="text" style="height: 80px;"/>
+             </td>
             </tr>
-              
+         </table>
+
+           <h5>hyra, hyresvillkor<small>(belopp exkl. moms där annat ej anges)</small></h5>
+           <table>
+           <tr>
+            <td class="tdwithSameSize" >
+              <small><label>Hyresperiod (antal månader) </label></small> 
+               <input type="text"/>
+             </td>
             
-          
-         </tabel>
+
+             <td class="tdwithSameSize" >
+              <small><label> Hyra per månad </label></small> 
+               <input type="text" />
+             </td>
+            
+             <td class="tdwithSameSize">
+              <small><label>Betalningsperiod</label></small> 
+               <input type="text"/>
+             </td>
+             
+             <td class="tdwithSameSize" >
+              <small><label>Uppläggningsavgift</label></small> 
+               <input type="text"/>
+             </td>
+
+             <td class="tdwithSameSize">
+              <small><label>Aviavgift</label></small> 
+               <input type="text"/>
+             </td>
+            
+            </tr>
+          </table>
+            <table >
+              <tr>
+             <td>
+              <small><label>På varje förfallodag ska belastas bankgiro nr. (om autogiro används)</label></small> 
+               <input type="text" style="width:6%";/>
+               <input type="text"style="width:6%";/>
+               <input type="text" style="width:6%";/>
+               <input type="text" style="width:6%";/> __
+               <input type="text" style="width:6%";/>
+               <input type="text"style="width:6%";/>
+               <input type="text" style="width:6%";/>
+               <input type="text"style="width:6%";/>
+             </td>
+             
+                <td ><p style="font-size: 10px;">Hyra ska betalas kvartalsvis i förskott senast den första dagen i varje kvartal. En första hyresavgift (initialavgift) skall erläggas för tiden från leverans av föremålet till avtalets startdag. Initialavgiften är 1/30 av månadsavgiften from leveransdag till avtalets startdag. Avi, uppläggningsavgift samt initialavgift förfaller tillbetalning efter leverans.</p></td>
+              </tr>
+            </table>
+            
+         <table>
+          <thead>
+            <th>särskilda villkor</th>
+          </thead>
+          <tr>
+            <td >
+             <input type="text" style="height: 80px; width: 100%;"/>
+           </td>
+
+          </table>
+          <table>
+          <tr>
+           <td>
+             <p style="font-size: 10px; border: black 1px solid;">Vi (Hyrestagare, ”HT”) har informerats om överlåtelsen av rättigheterna enligt detta avtal till GRENKELEASING AB (”Grenke”), org. nr 556649- 3929. Samtliga rättigheter enligt detta avtal, inklusive äganderätten till hyresföremålet, överlåts således på Grenke i samband med undertecknandet. Utöver ovanstående villkor gäller ”GRENKELEASING AB Allmänna villkor 19SE01”, vilka HT tagit del av och godkänt. Muntliga eller skriftliga avtal eller utfästelser av leverantören eller ombud för Grenke gäller ej, såvida dessa inte skriftligen godkänts av Grenke. Grenke ansvarar inte för garanti, service, underhåll, förbrukning och tjänster (”Service & Underhåll”) som kan ingå i hyran eller hyresföremålets skick eller lämplighet för HT. HT äger inte innehålla någon betalning till Leverantören pga. fel eller brist i hyresföremålet eller med anledning av fel eller brist i Leverantörens fullgörande av sina åtaganden. HT har informerats att leverantören fakturerar samtliga avgifter enligt detta avtal; betalning av såväl avgifter hänförliga till Service & Underhåll som uthyrningen av hyresföremålet ska således ske till av leverantören anvisat bankkonto. HT har också informerats om att Grenke när som helst under avtalstiden kan meddela att betalning av hyresavgifter och andra avgifter hänförliga till uthyrningen av hyresföremålet istället ska ske till av Grenke anvisat konto. Detta avtal har upprättats i två likalydande exemplar, varav parterna tagit var sitt. Avtalet är inte bindande för Grenke förrän det undertecknats av denne. Avtalet är bindande för HT genom dennes underskrift</p>
+           </td>
+          </tr>
         </table>
 
-       </tbody>
-  
- 
-  
+        <table>
+            <thead>
+              <th>
+                underskrift hyrestagare
+              </th>
+              <th>
+                underskrift uthyrare
+              </th>
+            </thead>
 
+            <table>
+              <tr>
+                <td colspan="2">
+                  <small><label >ort</label></small>
+                </td>
+                <td colspan="2">
+                  <small><label >datum</label></small>
+                </td>
+              </tr>
 
- 
- 
-    
-     
-    
-    
-    
+              <tr>
+                <td  colspan="2"> <input type="text" style= "width:40%"/>
+                  <input type="text" style= "width:40%"/>
+                </td>
+                
+                <td  colspan="2"> <input type="text" style= "width:40%"/>
+                  <input type="text" style= "width:40%"/></td>
+              </tr>
+             
+              <tr>
+                <td colspan="2">
+                  <small><label >Underskrift</label></small>
+                </td>
+                <td colspan="2">
+                  <small><label >Underskrift</label></small>
+                </td>
+              </tr>
+              <tr>
+                <td  colspan="2"> <input type="text" style="height: 80px; width: 100%;"/>
+                  </td>
+                  <td  colspan="2"> <input type="text"  style="height: 80px; width: 100%;"/>
+                   </td>
+              </tr>
 
+              <tr>
+                <td colspan="2">
+                  <small><label >Namnförtydligande</label></small>
+                </td>
+                <td colspan="2">
+                  <small><label > Namnförtydligande</label></small>
+                </td>
+              </tr>
+              <tr>
+                <td  colspan="2"> <input type="text" style="height: 30px; width: 100%;"/>
+                  </td>
+                  <td  colspan="2"> <input type="text"  style="height: 30px; width: 100%;"/>
+                   </td>
+              </tr>
+            </table>
 
+            <table>
+              <thead>
+                <th>
+                  borgen
+                </th>
+                <th>
+                  leveransgodkännande
+                </th>
+              </thead>
+              <table>
+              <tr>
+                <td colspan="2"><p style="font-size: 10px;">Undertecknad går härmed i borgen för HT:s förpliktelser enligt detta avtal såsom för egen skuld. Detta borgensåtagande innebär att UH eller annan som övertagit UH:s rättigheter kan vända sig till borgensmannen för betalning enligt detta avtal.</p></td>
+                <td colspan="2"><p style="font-size: 10px;">Viktigt: På grundval av leveransgodkännandet betalar GRENKE LEASING AB (UH) köpeskillingen till och förvärvar därigenom hy resföremålet från leverantören. Underlåter därför HT att göra en funktionskontroll och/eller undertecknar HT leveransgodkännandet trots att hyresföremålet helt eller delvis ej levererats eller trots att hyresföremålet levererats i ett felaktigt eller bristfälligt skick ska HT ersätta UH för därigenom uppkommen skada.</p></td>
+              </tr>
 
+              <tr>
+                <td colspan="2">
+                  <small><label >ort</label></small>
+                </td>
+                <td colspan="2">
+                  <small><label >datum</label></small>
+                </td>
+              </tr>
 
- 
+              <tr>
+                <td  colspan="2"> <input type="text" style= "width:40%"/>
+                  <input type="text" style= "width:40%"/>
+                </td>
+                
+                <td  colspan="2"> <input type="text" style= "width:40%"/>
+                  <input type="text" style= "width:40%"/></td>
+              </tr>
+              
+              <tr>
+                <td colspan="2">
+                  <small><label >Underskrift</label></small>
+                </td>
+                <td colspan="2">
+                  <small><label >Underskrift</label></small>
+                </td>
+              </tr>
+              <tr>
+                <td  colspan="2"> <input type="text" style="height: 80px; width: 100%;"/>
+                  </td>
+                  <td  colspan="2"> <input type="text"  style="height: 80px; width: 100%;"/>
+                   </td>
+              </tr>
 
-<!--
-  <tabel>
+              <tr>
+                <td colspan="2">
+                  <small><label >Namnförtydligande</label></small>
+                </td>
+                <td colspan="2">
+                  <small><label > Namnförtydligande</label></small>
+                </td>
+              </tr>
+              <tr>
+                <td  colspan="2"> <input type="text" style="height: 30px; width: 100%;"/>
+                  </td>
+                  <td  colspan="2"> <input type="text"  style="height: 30px; width: 100%;"/>
+                   </td>
+              </tr>
 
-    <div class="col-xl-6 col-lg-6 col-md-6 col-6">
-    
-    <h6>hyrestagare</h6>
-<tabel>
+              
+            </table>
 
-    <tr>
-      <td>
-       <input type="text" id="org" placeholder="12" style="width:45%"/>
-       <input type="text" id="org"placeholder="13" style="width: 45%"/>
-      </td>
-    </tr>
-    <tr>
-      <td>
-       <input type="text" id="org" placeholder="14" style="width:45%"/>
-       <input type="text" id="org"placeholder="15" style="width: 45%"/>
-      </td>
-    </tr>
-    <tr>
-     <td>
-      <input type="text" id="org" placeholder="16" style="width:25%"/>
-      <input type="text" id="org"placeholder="17" style="width: 20%"/>
-      <input type="text" id="org" placeholder="16" style="width:25%"/>
-      <input type="text" id="org"placeholder="17" style="width: 20%"/>
-     </td>
-   </tr>
-   <tr>
-     <td>
-      <input type="text" id="org" placeholder="16"/>
-      <input type="text" id="org"placeholder="17"/>
-     
-     </td>
-   </tr>
+            </table>
+            
+          </table>
 
-
-   </tabel>
- </div>
-</tabel></div>-->
-
+</div>
 </div>
 <div class="footer"></div>
     </div>
     </div>
     </div>
+    </page>
+    <page size="A4">
+      <div class="divse">
+      <div class="bobo">
+      
+      <div class="header">
+       <div class="row text-left " >
+          <img src="./img/Annotation 2020-04-06 143202.png" alt="">
+          </div>
+      </div>
+      <div class="body">
+        <div style="background-color: darkgrey;">
+          <h5>KUNDKÄNNEDON</h5>
+          <P  style="font-size: 10px;">GRENKELEASING AB måste enligt lag (2009:62) om åtgärder mot penningtvätt och finansiering av terrorism säkerställa att vi väl känner  våra kunder och deras transaktioner. Ett föreskrivet led i åtgärderna att uppnå kundkännedom är att vi måste inhämta informationom våra  kunders identitet och de så kallade verkliga huvudmännen (dvs, en fysisk person för vars räkning någon handlar eller, om kunden är en  juridisk person, en fysisk person som kan bestämma över kunden.
+            Mot denna bagrund ber vi er lämna nedanstående uppgifter om det bolag som är vår kund. Om bolaget ägs av ett annat bolag ber vi er  också lämna motsvarande information om detta bolag.</P>
+        </div>
+        <div  style="background-color: darkgrey;">
+        <table>
+          <tr>
+            <td colspan="2">
+              <small><label >KUND</label></small>
+            </td>
+           
+          </tr>
+          <tr>
+            <td  colspan="2"> <input type="text" style="height: 30px; width: 100%;"placeholder="Företagsnamn"/>
+              </td>
+              <td  colspan="2"> <input type="text"  style="height: 30px; width: 100%;" placeholder=" Org. nr"/>
+               </td>
+          </tr>
+        </table>
+      </div>
+
+
+
+
+
+
+      </div>
+      <div class="footer"></div>
+</div>
+</div>
     </page>
 </body>
 </html>
