@@ -221,23 +221,40 @@ textarea {
 th, td {
   
   text-align: left;
-  width: 100px;
+  width: 80px;
+  border: 1px solid black;
+  
+
 }
 
-table tbody td{
+table tbody td {
   border:1px solid #000;
-
+  
 }
-.withoutBorder
-{
+.withoutBorder{
+
   border:0px solid #000;
 }
 .tdwithSameSize
 {
   width: 20%;
 }
+.table2{
+  background-color:white;
+  height: 10%;
+  font-size: 11px;
+  text-align: left;
+  
+ 
+}
+.table2 td,.table2 th  {
+  border: 4px darkgray solid;
+}
+
 </style>
+
 </head>
+
 <body>
 <page size="A4">
 <div class="divse">
@@ -570,13 +587,15 @@ table tbody td{
             
           </table>
 
-</div>
-</div>
-<div class="footer"></div>
+    </div>
+    </div>
+    <div class="footer"></div>
     </div>
     </div>
     </div>
     </page>
+
+
     <page size="A4">
       <div class="divse">
       <div class="bobo">
@@ -592,6 +611,7 @@ table tbody td{
           <P  style="font-size: 10px;">GRENKELEASING AB måste enligt lag (2009:62) om åtgärder mot penningtvätt och finansiering av terrorism säkerställa att vi väl känner  våra kunder och deras transaktioner. Ett föreskrivet led i åtgärderna att uppnå kundkännedom är att vi måste inhämta informationom våra  kunders identitet och de så kallade verkliga huvudmännen (dvs, en fysisk person för vars räkning någon handlar eller, om kunden är en  juridisk person, en fysisk person som kan bestämma över kunden.
             Mot denna bagrund ber vi er lämna nedanstående uppgifter om det bolag som är vår kund. Om bolaget ägs av ett annat bolag ber vi er  också lämna motsvarande information om detta bolag.</P>
         </div>
+
         <div  style="background-color: darkgrey;">
         <table>
           <tr>
@@ -609,15 +629,63 @@ table tbody td{
         </table>
       </div>
 
+      <div style=" text-align: left; background-color: darkgray;"  >
+        <h5>ÄGARE</h5>
+        <P  style="font-size: 10px; text-align: left;">Följande fysiska personer äger aktier motsvarande 25 % eller mer av kapitalet eller röster i företaget. Om innehavet är indirekt ska även  anges genom vilket / vilka bolag ägandet / röstandelen utövas. Ange även om personen är en person i politiskt utsatt ställning (PEP*).</P>
 
+        <table class="table2">
+          <tr>
+            <th>ÄGAR</th>
+            <th>PERS / ORG. NR</th>
+            <th>AKTIEINNEHAV ELLER RÖSTER I % PEP</th>
+          </tr>
 
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
 
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
 
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+        </table>
+        <table>
+          <tr>
+            <td style="border:0px;"></td>
+            <td style="font-size: 8px; border:0px;" ><p >* PEP – Person i politiskt utsatt ställning definieras som en person har eller tidigare haft viktiga offentliga 
+              funktioner i en stat eller i en internationell organisation eller närstående eller kändmedarbetare till en PEP.</p></td>
+          </tr>
+        </table>
+        
+      </div>
+      <div style="background-color:darkgrey ;">
+        <table>
+          <tr>
+            <td  style="width: 30%;"> <input type="text" style=" margin: 4px;"  placeholder="Datum "/></td>
+            <td rowspan="2"></td>
+          </tr>
+          <tr>
+            <td  style="width: 30%; "> <input type="text" style=" margin: 4px;" placeholder="ort" /></td>
+          
+          </tr>
+        </table>
+      </div>
 
       </div>
+      
       <div class="footer"></div>
-</div>
-</div>
+     </div>
+     </div>
     </page>
-</body>
+ </body>
 </html>
