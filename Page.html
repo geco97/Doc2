@@ -146,7 +146,7 @@ margin-top: 4px;
 margin-bottom: 4px;}
 .bobo{
 	display: grid;
-	grid-template-rows: 6cm auto 2cm 1cm;
+	grid-template-rows: 4cm auto 2cm 1cm;
 	height: 100%;	
 }
 .header,.body,.footer{
@@ -218,13 +218,14 @@ textarea {
 
 
 }
-th, td {
-  
+ td {
   text-align: left;
   width: 80px;
   border: 1px solid black;
-  
-
+  }
+th{
+  text-align: left;
+  width: 50%;
 }
 
 table tbody td {
@@ -242,15 +243,18 @@ table tbody td {
 .table2{
   background-color:white;
   height: 10%;
-  font-size: 11px;
+  font-size: 10px;
   text-align: left;
-  
- 
 }
 .table2 td,.table2 th  {
   border: 4px darkgray solid;
 }
-
+.table2 th{
+  width:33%;
+}
+html{
+  font-size: 10px;
+}
 </style>
 
 </head>
@@ -261,15 +265,9 @@ table tbody td {
 <div class="bobo">
 
 <div class="header">
-  <div class="row text-right " >
-  <img src="./img/Annotation 2020-04-02 093246.png" alt="">
-  
-  </div>
-
-  <div class="row">
-    <div class="col-xl-6 col-lg-6 col-md-6 col-6">
-      
-        <h4  class=" text-left ">HYRESAVTAL</h4>
+  <div class="row" >
+    <div class="col-6 col-xl-6 col-lg-6 col-md-6 col-6" style=" margin-top: 1cm;">
+      <h5  class=" text-left my-0 py-0">HYRESAVTAL</h5>
         <div class="hyers">
           <table>
        <tr>
@@ -277,10 +275,21 @@ table tbody td {
           <small><label>avatallnummer</label></small> 
           <input type="text" id="avtalnummer" placeholder="123" />
         </td>
-        <td class="withoutBorder"></td>
        </tr>
       </table>
       </div>
+    </div>
+    <div class="col-6 col-xl-6 col-lg-6 col-md-6 col-6 text-right">
+      <img src="./img/Annotation 2020-04-02 093246.png" width="220" alt="">
+    </div>
+  
+  
+  </div>
+
+  <div class="row">
+    <div class="col-xl-6 col-lg-6 col-md-6 col-6">
+      
+        
       </div>
   </div>
 
@@ -289,10 +298,10 @@ table tbody td {
 <div class="body">
   <table>
     <thead>
-      <th>
+      <th class="withoutBorder">
         hyrestagare
       </th>
-      <th>
+      <th  class="withoutBorder">
         leverantör
       </th>
     </thead>
@@ -301,21 +310,21 @@ table tbody td {
         <table>
           <tr>
             <td>
-              <small><label >Ongqw</label></small>
+              <small><label >Org.nr</label></small>
               <input type="text"/>
             </td>
-            
-          <small><label >Ongww12</label></small>
+            <td>
+          <small><label >Org.nr</label></small>
               <input type="text"/>
             </td>
           </tr>
           <tr>
             <td>
-              <small><label >Ong</label></small>
+              <small><label >Namn</label></small>
               <input type="text"/>
             </td>
             <td>
-              <small><label >Ong</label></small>
+              <small><label >Namn</label></small>
               <input type="text"/>
             </td>
           </tr>
@@ -324,13 +333,8 @@ table tbody td {
           <td> 
             <table>
             <tr>
-              <td colspan="2">
-                <small><label >Ong2</label></small>
-              </td>
-            </tr>
-            <tr>
-              <td> <input type="text" style= "width:90%"/></td>
-              <td> <input type="text" style= "width:90%"/></td>
+              <td  class="withoutBorder"> <small><label >Avtalskontakt</label></small> <input type="text" /></td>
+              <td  class="withoutBorder"> <small><label >Tel</label></small><input type="text" /></td>
             </tr>
            
             </table>
@@ -338,15 +342,12 @@ table tbody td {
         
          <td>
             <table>
-           <tr>
-            <td  colspan="2">
-            <small><label >Ongcc</label></small>
-           </td>
-          </tr>
-            <tr>
-            <td>
-            <input type="text" style= "width:40%"/>
-            <input type="text" style="width:40%"/>
+         <tr>
+            <td  class="withoutBorder"><small><label > Avtalskontak</label></small>
+            <input type="text" /></td>
+            <td  class="withoutBorder">
+            <small><label > Tel</label></small>
+            <input type="text"/>
           </td>
          </tr>
          </table>
@@ -355,7 +356,7 @@ table tbody td {
 
          <tr >
           <td  colspan="2">
-            <small><label >Ongbb</label></small>
+            <small><label >Ev avvikande fakturaadress</label></small>
           <input type="text" />
           </td>
          
@@ -364,7 +365,7 @@ table tbody td {
         
          <tr >
           <td  colspan="2">
-            <small><label >On</label></small>
+            <small><label >Leveransadress / Installationsplats</label></small>
           <input type="text" />
           </td>
          </tr>
@@ -372,7 +373,7 @@ table tbody td {
 </table>
          <table>
            <thead>
-             <th>Hyresföremål</th>
+             <th class="withoutBorder">Hyresföremål</th>
            </thead>
            <tr>
              <td style="width:70%">
@@ -384,14 +385,16 @@ table tbody td {
 
 
             <td style="width:25%">
-              <small><label>Typ</label></small> 
+              <small><label> Serienr</label></small> 
                <input type="text" style="height: 80px;"/>
              </td>
             </tr>
          </table>
+         <table>
+          <thead>
+            <th class="withoutBorder" colspan="5">hyra, hyresvillkor<small>(belopp exkl. moms där annat ej anges)</small></th>
+          </thead>
 
-           <h5>hyra, hyresvillkor<small>(belopp exkl. moms där annat ej anges)</small></h5>
-           <table>
            <tr>
             <td class="tdwithSameSize" >
               <small><label>Hyresperiod (antal månader) </label></small> 
@@ -441,7 +444,7 @@ table tbody td {
             
          <table>
           <thead>
-            <th>särskilda villkor</th>
+            <th  class="withoutBorder">särskilda villkor</th>
           </thead>
           <tr>
             <td >
@@ -459,31 +462,32 @@ table tbody td {
 
         <table>
             <thead>
-              <th>
+              <th  class="withoutBorder">
                 underskrift hyrestagare
               </th>
-              <th>
+              <th  class="withoutBorder">
                 underskrift uthyrare
               </th>
             </thead>
 
             <table>
+              
               <tr>
-                <td colspan="2">
-                  <small><label >ort</label></small>
-                </td>
-                <td colspan="2">
-                  <small><label >datum</label></small>
-                </td>
-              </tr>
-
-              <tr>
-                <td  colspan="2"> <input type="text" style= "width:40%"/>
-                  <input type="text" style= "width:40%"/>
+                <td>  <small><label >ort</label></small>
+                  <input type="text" style= "width:100%"/>
+                  </td>
+                  <td>
+                    <small><label >datum</label></small>
+                  <input type="text" style= "width:100%"/>
                 </td>
                 
-                <td  colspan="2"> <input type="text" style= "width:40%"/>
-                  <input type="text" style= "width:40%"/></td>
+                <td>  <small><label >ort</label></small>
+                  <input type="text" style= "width:100%"/>
+                  </td>
+                  <td>
+                    <small><label >datum</label></small>
+                  <input type="text" style= "width:100%"/>
+                </td>
               </tr>
              
               <tr>
@@ -502,27 +506,19 @@ table tbody td {
               </tr>
 
               <tr>
-                <td colspan="2">
-                  <small><label >Namnförtydligande</label></small>
-                </td>
-                <td colspan="2">
-                  <small><label > Namnförtydligande</label></small>
-                </td>
-              </tr>
-              <tr>
-                <td  colspan="2"> <input type="text" style="height: 30px; width: 100%;"/>
+                <td  colspan="2"> <small><label >Namnförtydligande</label></small><input type="text" style="height: 30px; width: 100%;"/>
                   </td>
-                  <td  colspan="2"> <input type="text"  style="height: 30px; width: 100%;"/>
+                  <td  colspan="2"><small><label > Namnförtydligande</label></small> <input type="text"  style="height: 30px; width: 100%;"/>
                    </td>
               </tr>
             </table>
 
             <table>
               <thead>
-                <th>
+                <th  class="withoutBorder">
                   borgen
                 </th>
-                <th>
+                <th  class="withoutBorder">
                   leveransgodkännande
                 </th>
               </thead>
@@ -630,7 +626,7 @@ table tbody td {
       </div>
 
       <div style=" text-align: left; background-color: darkgray;"  >
-        <h5>ÄGARE</h5>
+        <h5>ÄGARE </h5>
         <P  style="font-size: 10px; text-align: left;">Följande fysiska personer äger aktier motsvarande 25 % eller mer av kapitalet eller röster i företaget. Om innehavet är indirekt ska även  anges genom vilket / vilka bolag ägandet / röstandelen utövas. Ange även om personen är en person i politiskt utsatt ställning (PEP*).</P>
 
         <table class="table2">
@@ -671,11 +667,14 @@ table tbody td {
       <div style="background-color:darkgrey ;">
         <table>
           <tr>
-            <td  style="width: 30%;"> <input type="text" style=" margin: 4px;"  placeholder="Datum "/></td>
-            <td rowspan="2"></td>
+            <td class="withoutBorder"  style="width: 30%;"> <input type="text" style=" margin: 4px;"  placeholder="Datum "/></td>
+            <td class="withoutBorder" rowspan="2">
+            <div class="col-12 p-4 bg-white" style="height:90px; background: #fff;margin:2px"></div>
+
+            </td>
           </tr>
           <tr>
-            <td  style="width: 30%; "> <input type="text" style=" margin: 4px;" placeholder="ort" /></td>
+            <td class="withoutBorder"  style="width: 30%; "> <input type="text" style=" margin: 4px;" placeholder="ort" /></td>
           
           </tr>
         </table>
